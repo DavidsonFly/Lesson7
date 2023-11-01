@@ -1,0 +1,32 @@
+#include <iostream>
+#define MODE 1
+#ifndef MODE 
+#error "Unknown mode, the program must be completed..."
+#endif
+
+int add(int a, int b)
+{
+
+	return a + b;
+}
+
+int main()
+{
+	
+#if MODE == 1
+	std::cout << "I am in force mode" << std::endl;
+	int x, y;
+	std::cout << "Enter the first enteger:" << std::endl;
+	std::cin >> x;
+	std::cout << "Enter the second enteger:" << std::endl;
+	std::cin >> y;
+	std::cout << "The sum of the first and second entegers is: " << add(x, y) << std::endl;
+#elif MODE == 0
+	std::cout << "I am in trainig mode" << std::endl;
+#else
+	std::cout << "Unknown mode" << std::endl;
+#endif
+
+
+	return 0;
+}
