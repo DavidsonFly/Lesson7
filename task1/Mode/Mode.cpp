@@ -7,11 +7,14 @@
 #error "Unknown mode, the program must be completed..."
 #endif
 
+#if MODE == 1
+
 int add(int a, int b)
 {
-
 	return a + b;
 }
+
+#endif
 
 int main()
 {
